@@ -67,7 +67,7 @@ def update_html():
         original_width = photo.width
     has_small = (ASSETS / "portrait-640.webp").exists()
     small_width = min(640, original_width)
-    tag_rx = re.compile(r"<img\\b[^>]*>", re.IGNORECASE)
+    tag_rx = re.compile(r"<img\b[^>]*>", re.IGNORECASE)
 
     def update_tag(match):
         tag = match.group(0)
