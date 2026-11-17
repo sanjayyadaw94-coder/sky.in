@@ -323,3 +323,9 @@ main { overflow:clip; }
  .index-table-scroll { overflow:visible; }
  .index-table tbody th, .index-table tbody td { padding:8px; }
 }
+
+/* Full-name-only index list */
+.index-name-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.index-name-card{border:1px solid var(--line);background:#fff;border-radius:12px;padding:22px 20px;font-size:15px;font-weight:600;line-height:1.5;color:var(--ink);box-shadow:0 8px 23px #26374c0b}
+@media(max-width:900px){.index-name-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.index-name-grid{grid-template-columns:1fr}.index-name-card{padding:17px 18px}}
