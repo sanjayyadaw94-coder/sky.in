@@ -6,7 +6,7 @@ A static personal portfolio documenting professional experience, geospatial and 
 
 - `docs/index.html` - personal introduction and analytical focus
 - `docs/about.html` - career timeline and education from the latest CV
-- `docs/expertise.html` - GIS, 12 agricultural spectral indices (full forms and formulas), sensors, UAV imagery and elevation analysis
+- `docs/expertise.html` - GIS, 12 agricultural indices (full names only), imagery capabilities, UAV data analysis and elevation analysis
 - `docs/projects.html` - portfolio areas: multispectral imagery, terrain models, drone imagery and spatial field-data checks
 - `docs/gallery.html` - clearly labeled illustrative GIS/dashboard/forms/web examples
 - `docs/credentials.html` - training certificates and qualifications
