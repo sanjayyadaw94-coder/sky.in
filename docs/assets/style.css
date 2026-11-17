@@ -265,3 +265,61 @@ main { overflow:clip; }
  .visual-steps span { font-size:11px; padding:10px; }
  .case-visual-header { font-size:8px; }
 }
+
+/* Portfolio index catalog and imagery capability cards */
+.indices-section, .sensor-section { scroll-margin-top:28px; }
+.indices-section { padding-top:78px; }
+.index-intro { font-size:13px; line-height:1.8; max-width:1000px; margin-bottom:20px; }
+.index-intro strong { color:var(--ink); font-weight:650; }
+.index-table-scroll { border:1px solid var(--line); border-radius:15px; overflow-x:auto; background:#fff; box-shadow:0 16px 38px #26374c0c; }
+.index-table-scroll:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+.index-table { width:100%; min-width:920px; border-collapse:separate; border-spacing:0; table-layout:fixed; font-size:12px; color:var(--ink); }
+.index-table thead th { background:#1c5544; color:white; font-size:11px; font-weight:650; text-align:left; padding:17px 15px; border-right:1px solid #ffffff22; }
+.index-table thead th:last-child { border-right:0; }
+.index-table thead th:nth-child(1) { width:27%; }
+.index-table thead th:nth-child(2) { width:30%; }
+.index-table thead th:nth-child(3) { width:26%; }
+.index-table thead th:nth-child(4) { width:17%; }
+.index-table tbody tr:nth-child(even) { background:#f7faf9; }
+.index-table tbody tr:hover { background:#f0f8f5; }
+.index-table tbody th, .index-table tbody td { border-bottom:1px solid #dce7e2; padding:16px 15px; text-align:left; vertical-align:middle; line-height:1.65; }
+.index-table tbody tr:last-child>th, .index-table tbody tr:last-child>td { border-bottom:0; }
+.index-short { display:block; font-size:14px; color:#146247; font-weight:750; letter-spacing:.01em; margin-bottom:5px; }
+.index-full { display:block; color:#425367; font-size:11px; font-weight:450; line-height:1.55; }
+.index-table code { display:block; font-size:11px; font-family:Consolas,'Courier New',monospace; line-height:1.7; color:#28415b; white-space:normal; overflow-wrap:anywhere; }
+.sensor-compat { display:inline-flex; color:#215f54; background:#e7f6f2; padding:5px 9px; border-radius:7px; font-size:10px; line-height:1.5; font-weight:600; }
+.sensor-compat.rededge { color:#623a9a; background:#f1eafa; }
+.index-note { font-size:12px; margin-top:17px; max-width:1120px; line-height:1.85; }
+.index-note strong { color:var(--ink); }
+.sensor-grid .plain-card { display:flex; flex-direction:column; gap:5px; background:#fff; box-shadow:0 10px 30px #29415c0b; }
+.sensor-grid .plain-card h3 { font-size:25px; }
+.sensor-grid .plain-card p { font-size:12px; line-height:1.75; }
+.sensor-grid .plain-card strong { color:#273d50; font-weight:650; }
+.sensor-footnote { font-size:11px; color:var(--muted); padding:14px 0 0; line-height:1.7; }
+.project-case-visual.is-drone { background:linear-gradient(145deg,#edf8ee,#e8f2ff); }
+.project-case-visual.is-terrain { background:linear-gradient(145deg,#f8f1e8,#edf6ee); }
+.portfolio-focus .plain-card { display:flex; flex-direction:column; }
+.portfolio-focus .plain-card h3 { font-size:24px; }
+.portfolio-focus .plain-card p:not(.eyebrow) { flex:1; }
+.portfolio-focus .plain-card .text-link { align-self:flex-start; font-size:12px; margin-top:10px; }
+.gallery-disclosure { font-size:12px; line-height:1.7; }
+.header .brand { min-width:0; }
+.header .brand>span:last-child { min-width:0; overflow-wrap:normal; }
+.header .brand b { max-width:245px; overflow-wrap:normal; line-height:1.4; }
+.header .menu-button { flex-shrink:0; }
+@media(max-width:760px) {
+ .index-table-scroll { margin-inline:0; }
+ .index-table { min-width:870px; }
+ .indices-section, .sensor-section { padding-top:50px; }
+ .sensor-grid { grid-template-columns:1fr; }
+ .header { gap:8px; }
+ .header .brand { gap:8px; }
+ .header .brand>span:last-child { white-space:normal; line-height:1.3; }
+ .header .brand b { font-size:8px; max-width:165px; }
+ .header .menu-button { padding:8px 9px; }
+}
+@media print {
+ .index-table { min-width:0; font-size:10px; }
+ .index-table-scroll { overflow:visible; }
+ .index-table tbody th, .index-table tbody td { padding:8px; }
+}
