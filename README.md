@@ -1,36 +1,39 @@
-# Sanjay Kumar Yadav | GIS & Data Solutions
+# Sanjay Kumar Yadav | Personal GIS & Remote Sensing Portfolio
 
-Professional portfolio website with a light theme, career background, GIS and data workflows, services, training credentials and contact details.
+A static personal portfolio documenting professional experience, geospatial and data management skills, formal education, selected training and analytical focus areas.
 
-## Website pages
+## Pages
 
-- `docs/index.html` - profile, GIS/Data specialization and featured workflows
-- `docs/about.html` - CV-aligned career timeline, education and approach
-- `docs/expertise.html` - GIS, data analytics, technical skills and AI-assisted workflow scope
-- `docs/projects.html` - SAR, optical-index and field-data QA method spotlights
-- `docs/solutions.html` - illustrative service areas and digital solution examples
-- `docs/credentials.html` - professional training and academic foundation
-- `docs/contact.html` - project enquiries and contact links
+- `docs/index.html` - personal introduction and analytical focus
+- `docs/about.html` - career timeline and education from the latest CV
+- `docs/expertise.html` - GIS, 12 agricultural spectral indices (full forms and formulas), sensors, UAV imagery and elevation analysis
+- `docs/projects.html` - portfolio areas: multispectral imagery, terrain models, drone imagery and spatial field-data checks
+- `docs/gallery.html` - clearly labeled illustrative GIS/dashboard/forms/web examples
+- `docs/credentials.html` - training certificates and qualifications
+- `docs/contact.html` - professional contact details
 
-The site is written in plain HTML, CSS and JavaScript, with static files under `docs/` for GitHub Pages.
+The old `docs/solutions.html` path redirects to `docs/gallery.html` to preserve existing bookmarks. This is a **personal portfolio**, not a commercial services catalog.
 
-## Editorial principles
+## Terminology and analytical scope
 
-- The latest provided CV is the source for job titles, career dates, education and documented skill areas.
-- The project workflow cards illustrate technical methods; they do not imply verified measured outcomes or disclose private field datasets.
-- Training and AI-assisted workflow descriptions are appropriately scoped; they do not imply independent certification of expertise.
-- Sample screenshots, synthetic data and AI-generated illustration are labeled as examples.
+- Sentinel-2: MultiSpectral Instrument (MSI).
+- Landsat 8: Operational Land Imager (OLI).
+- Landsat 9: Operational Land Imager 2 (OLI-2).
+- DEM: Digital Elevation Model; DTM: Digital Terrain Model; DSM: Digital Surface Model.
+- UAV: Unmanned Aerial Vehicle (drone) imagery data analysis.
 
-## Local preview
+Red-edge-specific indices depend on Sentinel-2 bands not provided by Landsat 8/9 OLI-family imagery. Drone-derived Near-Infrared indices require an appropriate multispectral sensor, not RGB photos alone.
 
-From the repository root, run:
+The technical scope is a portfolio of described skills and methods. Illustrations are not represented as client-owned project results, verified accuracy figures or confidential datasets.
+
+## Preview locally
 
 ```sh
 python3 -m http.server 8000 --directory docs
 ```
 
-Then open `http://localhost:8000/` in a browser.
+Open `http://localhost:8000/` to inspect the static pages.
 
 ## Site maintenance
 
-Update page metadata, sitemap URLs and public contact information together when the deployment domain or CV changes. Avoid committing personal identifiers from field records or confidential client data.
+Update career details from the latest CV, preserve privacy of field records, keep sitemap and canonical URLs consistent, and verify responsive navigation before publishing.
