@@ -661,3 +661,14 @@ a:focus-visible, button:focus-visible, .index-table-scroll:focus-visible { outli
   .service-card, .plain-card, .project-case, .index-name-card { border-color: #8995a9; }
   .filters button:focus-visible, a:focus-visible, button:focus-visible { outline-width: 4px; }
 }
+
+/* Floating index icons and explanatory captions */
+.index-name-card { display:flex; align-items:flex-start; gap:15px; min-height:138px; }
+.index-float-icon { flex:none; display:inline-flex; align-items:center; justify-content:center; width:43px; height:43px; border-radius:12px; background:#eef6f2; border:1px solid #d6e8df; font-size:22px; line-height:1; animation:indexIconFloat 4s ease-in-out infinite; animation-delay:var(--float-delay,0s); }
+.index-card-copy { display:flex; flex-direction:column; gap:8px; min-width:0; }
+.index-card-name { font-size:14px; line-height:1.45; font-weight:700; color:#243448; }
+.index-card-use { font-size:12px; line-height:1.65; color:#526177; font-weight:400; }
+.index-use-note { font-size:12px; line-height:1.7; margin-top:18px; }
+@keyframes indexIconFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+@media(max-width:760px) { .index-name-card { min-height:118px; } .index-card-name { font-size:15px; } .index-card-use { font-size:13px; } }
+@media(prefers-reduced-motion:reduce) { .index-float-icon { animation:none; transform:none; } }
