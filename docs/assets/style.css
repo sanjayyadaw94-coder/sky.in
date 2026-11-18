@@ -741,3 +741,56 @@ a:focus-visible, button:focus-visible, .index-table-scroll:focus-visible { outli
     will-change: auto;
   }
 }
+
+
+/* Modern floating SVG skill icons on homepage */
+.home-page .service-card .service-icon {
+  flex: none;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f5f0ff 0%, #ebe4ff 100%);
+  border: 1px solid #e6dcff;
+  color: #7050bd;
+  box-shadow: 0 6px 18px rgba(105,75,195,.08), inset 0 1px 0 rgba(255,255,255,.9);
+}
+.home-page .service-card:nth-child(even) .service-icon {
+  background: linear-gradient(145deg, #edfafb 0%, #dcf3f5 100%);
+  border-color: #cee9ed;
+  color: #167f8d;
+  box-shadow: 0 6px 18px rgba(11,129,144,.08), inset 0 1px 0 rgba(255,255,255,.9);
+}
+.home-page .service-card .skill-icon-svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.home-page .service-card .card-top > span:last-child {
+  color: #728196;
+  font-size: 20px;
+}
+.home-page .service-card:hover .service-icon {
+  border-color: #b7a4e8;
+  box-shadow: 0 8px 22px rgba(105,75,195,.14);
+}
+.home-page .service-card:nth-child(even):hover .service-icon {
+  border-color: #9ad7df;
+  box-shadow: 0 8px 22px rgba(11,129,144,.14);
+}
+@media (max-width: 760px) {
+  .home-page .service-card .service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+  .home-page .service-card .skill-icon-svg {
+    width: 26px;
+    height: 26px;
+  }
+}
