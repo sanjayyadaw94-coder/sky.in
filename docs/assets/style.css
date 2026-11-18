@@ -672,3 +672,72 @@ a:focus-visible, button:focus-visible, .index-table-scroll:focus-visible { outli
 @keyframes indexIconFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
 @media(max-width:760px) { .index-name-card { min-height:118px; } .index-card-name { font-size:15px; } .index-card-use { font-size:13px; } }
 @media(prefers-reduced-motion:reduce) { .index-float-icon { animation:none; transform:none; } }
+
+
+/* Homepage floating icons: gentle motion, independent of link/card hover transforms */
+@keyframes homeIconBob {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -6px; }
+}
+@keyframes homeIconGlow {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(11,129,144,.10); }
+  50% { box-shadow: 0 0 0 7px rgba(11,129,144,.05); }
+}
+.home-page .monogram,
+.home-page .hero-signature .signature-mark,
+.home-page .badge-icon,
+.home-page .service-icon,
+.home-page .card-top > span:last-child,
+.home-page .home-inline-icon,
+.home-page .header-contact > span,
+.home-page .menu-button > span,
+.home-page .mini-credential div > span b,
+.home-page .float-star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  translate: 0 0;
+  animation: homeIconBob 4.2s ease-in-out infinite;
+  animation-delay: var(--home-icon-delay, 0s);
+  will-change: translate;
+}
+.home-page .monogram { --home-icon-delay: -.6s; }
+.home-page .hero-signature .signature-mark { --home-icon-delay: -1.8s; }
+.home-page .floating-label.label-analysis .badge-icon { --home-icon-delay: -1s; }
+.home-page .floating-label.label-gis .badge-icon { --home-icon-delay: -2.4s; }
+.home-page .service-card:nth-child(1) .service-icon,
+.home-page .service-card:nth-child(1) .card-top > span:last-child { --home-icon-delay: 0s; }
+.home-page .service-card:nth-child(2) .service-icon,
+.home-page .service-card:nth-child(2) .card-top > span:last-child { --home-icon-delay: -1.1s; }
+.home-page .service-card:nth-child(3) .service-icon,
+.home-page .service-card:nth-child(3) .card-top > span:last-child { --home-icon-delay: -2.2s; }
+.home-page .service-card:nth-child(4) .service-icon,
+.home-page .service-card:nth-child(4) .card-top > span:last-child { --home-icon-delay: -3.3s; }
+.home-page .home-inline-icon { --home-icon-delay: -1.5s; }
+.home-page .header-contact > span { --home-icon-delay: -.7s; }
+.home-page .menu-button > span { --home-icon-delay: -1.2s; }
+.home-page .mini-credential:nth-child(1) div > span b { --home-icon-delay: -.3s; }
+.home-page .mini-credential:nth-child(2) div > span b { --home-icon-delay: -1.5s; }
+.home-page .mini-credential:nth-child(3) div > span b { --home-icon-delay: -2.7s; }
+.home-page .float-star {
+  --home-icon-delay: -2s;
+  animation: rotate 30s linear infinite, homeIconBob 4.2s ease-in-out infinite;
+}
+.home-page .status-dot { animation: homeIconGlow 3.6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .home-page .monogram,
+  .home-page .hero-signature .signature-mark,
+  .home-page .badge-icon,
+  .home-page .service-icon,
+  .home-page .card-top > span:last-child,
+  .home-page .home-inline-icon,
+  .home-page .header-contact > span,
+  .home-page .menu-button > span,
+  .home-page .mini-credential div > span b,
+  .home-page .float-star,
+  .home-page .status-dot {
+    animation: none !important;
+    translate: none;
+    will-change: auto;
+  }
+}
